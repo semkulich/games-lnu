@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+
+  # Browser
+  browser:
+    hostname: browser
+    image: selenium/standalone-chrome
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}

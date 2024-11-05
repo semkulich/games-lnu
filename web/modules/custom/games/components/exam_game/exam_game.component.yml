@@ -1,0 +1,17 @@
+name: Exam Game
+description: 'Exam Game.'
+js:
+  exam_game.js: {attributes: { type: 'text/babel' }}
+css:
+  exam_game.css: {}
+# This component makes use of an existing shared library which is provided by
+#   another component (library type). This is how to share and manage common
+#   assets across different components.
+dependencies:
+ - component/react_lib
+cache:
+  max-age: 0
+props:
+  type: object
+  properties: {}
+# Inspired by: https://codepen.io/jlmortola/pen/VPYaEv

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * This is the module to create a games.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function games_preprocess_page(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() === 'entity.node.canonical') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node) {
+      $variables['#attached']['drupalSettings']['nodeId'] = $node->id();
+    }
+  }
+}

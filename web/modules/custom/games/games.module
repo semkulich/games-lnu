@@ -10,6 +10,7 @@
  */
 function games_preprocess_page(&$variables) {
   if (\Drupal::routeMatch()->getRouteName() === 'entity.node.canonical') {
+    /** @var \Drupal\node\NodeInterface $node */
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node) {
       $variables['#attached']['drupalSettings']['nodeId'] = $node->id();

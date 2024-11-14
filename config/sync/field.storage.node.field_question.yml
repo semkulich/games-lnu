@@ -1,0 +1,19 @@
+uuid: 9c5e16bf-25d7-476f-877e-2f3ce65a2a6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_question
+field_name: field_question
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

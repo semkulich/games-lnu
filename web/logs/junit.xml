@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Project Test Suite" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.000000">
+      <testsuite name="Drupal\Tests\games\Kernel\QuestionsRestResourceKernelTest" file="/var/www/web/modules/custom/games/tests/src/Kernel/QuestionsRestResourceKernelTest.php" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.000000">
+        <testcase name="testQuestionsRestResource" class="Drupal\Tests\games\Kernel\QuestionsRestResourceKernelTest" classname="Drupal.Tests.games.Kernel.QuestionsRestResourceKernelTest" file="/var/www/web/modules/custom/games/tests/src/Kernel/QuestionsRestResourceKernelTest.php" line="64" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\Exception">Drupal\Tests\games\Kernel\QuestionsRestResourceKernelTest::testQuestionsRestResource
+PHPUnit\Framework\Exception: PHP Deprecated:  Constant ASSERT_EXCEPTION is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+Deprecated: Constant ASSERT_EXCEPTION is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+PHP Deprecated:  Function assert_options() is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+Deprecated: Function assert_options() is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php:651
+/var/www/vendor/phpunit/phpunit/src/TextUI/Command.php:146
+/var/www/vendor/phpunit/phpunit/src/TextUI/Command.php:99</error>
+        </testcase>
+        <testcase name="testQuestionsRestResourceInvalidNode" class="Drupal\Tests\games\Kernel\QuestionsRestResourceKernelTest" classname="Drupal.Tests.games.Kernel.QuestionsRestResourceKernelTest" file="/var/www/web/modules/custom/games/tests/src/Kernel/QuestionsRestResourceKernelTest.php" line="97" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\Exception">Drupal\Tests\games\Kernel\QuestionsRestResourceKernelTest::testQuestionsRestResourceInvalidNode
+PHPUnit\Framework\Exception: PHP Deprecated:  Constant ASSERT_EXCEPTION is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+Deprecated: Constant ASSERT_EXCEPTION is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+PHP Deprecated:  Function assert_options() is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+Deprecated: Function assert_options() is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php:651
+/var/www/vendor/phpunit/phpunit/src/TextUI/Command.php:146
+/var/www/vendor/phpunit/phpunit/src/TextUI/Command.php:99</error>
+        </testcase>
+        <testcase name="testQuestionsRestResourceInvalidNodeType" class="Drupal\Tests\games\Kernel\QuestionsRestResourceKernelTest" classname="Drupal.Tests.games.Kernel.QuestionsRestResourceKernelTest" file="/var/www/web/modules/custom/games/tests/src/Kernel/QuestionsRestResourceKernelTest.php" line="112" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\Exception">Drupal\Tests\games\Kernel\QuestionsRestResourceKernelTest::testQuestionsRestResourceInvalidNodeType
+PHPUnit\Framework\Exception: PHP Deprecated:  Constant ASSERT_EXCEPTION is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+Deprecated: Constant ASSERT_EXCEPTION is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+PHP Deprecated:  Function assert_options() is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+Deprecated: Function assert_options() is deprecated in /var/www/web/core/tests/bootstrap.php on line 179
+
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php:685
+/var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php:651
+/var/www/vendor/phpunit/phpunit/src/TextUI/Command.php:146
+/var/www/vendor/phpunit/phpunit/src/TextUI/Command.php:99</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

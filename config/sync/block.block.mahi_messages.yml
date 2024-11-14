@@ -1,0 +1,22 @@
+uuid: 618552a7-680e-4975-9394-4d91cfdab21e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mahi
+_core:
+  default_config_hash: 6O0gC4TZTBbBnnzYfAFvabohhUaGB9BqasrpqHRWDQM
+id: mahi_messages
+theme: mahi
+region: highlighted
+weight: -12
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

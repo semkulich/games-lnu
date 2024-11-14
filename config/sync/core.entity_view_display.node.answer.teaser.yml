@@ -1,0 +1,24 @@
+uuid: 628a2d83-478a-4dc9-82f9-049b6d3f7c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.answer.field_answer
+    - field.field.node.answer.field_question
+    - node.type.answer
+  module:
+    - user
+id: node.answer.teaser
+targetEntityType: node
+bundle: answer
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_answer: true
+  field_question: true

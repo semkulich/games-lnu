@@ -1,0 +1,17 @@
+uuid: acee1be2-0235-4c71-801c-2abd75be11bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - games
+    - serialization
+    - user
+id: answer_rest_resource
+plugin_id: answer_rest_resource
+granularity: method
+configuration:
+  POST:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

@@ -1,0 +1,20 @@
+uuid: 96dec63e-6c7b-4108-ba0d-4da5c746ed3a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mahi
+_core:
+  default_config_hash: bxfUm8OiHyh66yCgvAPPb1uVzcEDmaptB9Wr4_iwayY
+id: mahi_primary_admin_actions
+theme: mahi
+region: content
+weight: -13
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

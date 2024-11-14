@@ -67,12 +67,10 @@ class AnswerRestResource extends ResourceBase {
    *   The response containing the created answer node.
    */
   public function post(array $data) {
-    // Перевіряємо, чи є у нас потрібні дані
     if (empty($data['question']) || empty($data['answer'])) {
       throw new AccessDeniedHttpException('Missing required fields.');
     }
 
-    // Створюємо нову ноду
     $node = Node::create([
       'type' => 'answer',
       'title' => 'Answer to question: ' . $data['question'],
@@ -83,10 +81,8 @@ class AnswerRestResource extends ResourceBase {
 
     $node->save();
 
-    // Логування
     $this->logger->info('Created new answer node with ID: @id', ['@id' => $node->id()]);
 
-    // Повертаємо відповідь
     return new ResourceResponse($node, 201);
   }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="core/tests/bootstrap.php" colors="true">
+  <php>
+    <ini name="error_reporting" value="E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT" />
+    <env name="SIMPLETEST_BASE_URL" value="http://172.20.0.5"/>
+  </php>
+  <testsuites>
+    <testsuite name="Functional Tests">
+      <directory suffix=".php">modules/custom/games/tests/src/Kernel</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

@@ -1,0 +1,26 @@
+uuid: 84223c2b-d2c7-41fc-8cd2-88cf10cfa4d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - component
+    - system
+  theme:
+    - mahi
+id: mahi_examgame
+theme: mahi
+region: content
+weight: 0
+provider: null
+plugin: 'component:exam_game'
+settings:
+  id: 'component:exam_game'
+  label: 'Exam Game'
+  label_display: '0'
+  provider: component
+  form_configuration: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/1

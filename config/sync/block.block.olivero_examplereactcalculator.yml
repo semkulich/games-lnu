@@ -1,0 +1,26 @@
+uuid: 35e2aa88-1162-4370-b49a-8aba8b1172c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - component
+    - system
+  theme:
+    - olivero
+id: olivero_examplereactcalculator
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'component:example_react_calc'
+settings:
+  id: 'component:example_react_calc'
+  label: 'Example React Calculator'
+  label_display: visible
+  provider: component
+  form_configuration: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/1

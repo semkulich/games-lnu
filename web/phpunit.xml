@@ -3,10 +3,11 @@
   <php>
     <ini name="error_reporting" value="E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT" />
     <env name="SIMPLETEST_BASE_URL" value="http://172.20.0.5"/>
+    <env name="SIMPLETEST_DB" value="mysql://user:user@db/default"/>
   </php>
   <testsuites>
     <testsuite name="Functional Tests">
-      <directory suffix=".php">modules/custom/games/tests/src/Functional</directory>
+      <directory suffix=".php">modules/custom/games/tests/src/Kernel</directory>
     </testsuite>
   </testsuites>
 </phpunit>

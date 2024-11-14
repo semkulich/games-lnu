@@ -1,0 +1,35 @@
+uuid: 8d30e687-35ca-44b8-a477-5303f4cc7a44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.answer.field_answer
+    - field.field.node.answer.field_question
+    - node.type.answer
+  module:
+    - user
+id: node.answer.default
+targetEntityType: node
+bundle: answer
+mode: default
+content:
+  field_answer:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_question:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

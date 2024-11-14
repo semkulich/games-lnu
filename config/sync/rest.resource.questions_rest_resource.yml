@@ -1,0 +1,17 @@
+uuid: d4cd2909-6f12-4a57-924b-8e6b837edd03
+langcode: en
+status: true
+dependencies:
+  module:
+    - games
+    - serialization
+    - user
+id: questions_rest_resource
+plugin_id: questions_rest_resource
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

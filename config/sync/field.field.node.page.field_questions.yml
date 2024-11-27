@@ -9,7 +9,7 @@ id: node.page.field_questions
 field_name: field_questions
 entity_type: node
 bundle: page
-label: Questions
+label: Питання
 description: ''
 required: false
 translatable: false

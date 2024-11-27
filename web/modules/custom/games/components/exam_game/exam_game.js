@@ -7,13 +7,12 @@ let WheelOfFortune = createReactClass({
       answer: "",
       totalAngle: 0,
       questions: [],
-      successMessage: "", // Додано для зберігання повідомлення про успіх
-      showWheel: true // Додано для контролю видимості колеса
+      successMessage: "",
+      showWheel: true
     };
   },
 
   componentDidMount: function () {
-    // Завантаження питань із REST API при першому рендерингу компонента
     fetch(`/api/questions/${this.props.nodeId}`)
       .then(response => {
         if (!response.ok) {
@@ -42,9 +41,9 @@ let WheelOfFortune = createReactClass({
     this.setState({ totalAngle: finalAngle });
 
     setTimeout(() => {
-      const selectedQuestion = this.state.questions[randomIndex]; // Зберігаємо вибране питання
+      const selectedQuestion = this.state.questions[randomIndex];
       this.setState({
-        selectedQuestion: selectedQuestion, // Просто рядок
+        selectedQuestion: selectedQuestion,
         spinning: false
       });
     }, 3000);
@@ -57,13 +56,11 @@ let WheelOfFortune = createReactClass({
   handleSubmitAnswer: function (event) {
     event.preventDefault();
 
-    // Формуємо дані для надсилання
     const answerData = {
-      question: this.state.selectedQuestion, // Просто зберігаємо рядок
+      question: this.state.selectedQuestion,
       answer: this.state.answer
     };
 
-    // Отримуємо CSRF токен
     let csrfToken = '';
 
     fetch('/session/token')
@@ -75,7 +72,6 @@ let WheelOfFortune = createReactClass({
       })
       .then(token => {
         csrfToken = token;
-        // Надсилаємо відповідь на сервер
         fetch('/api/answers', {
           method: 'POST',
           headers: {
@@ -92,10 +88,10 @@ let WheelOfFortune = createReactClass({
           })
           .then(data => {
             this.setState({
-              successMessage: "Ваша відповідь успішно збережена!", // Оновлюємо повідомлення про успіх
+              successMessage: "Ваша відповідь успішно збережена!",
               answer: "",
               selectedQuestion: null,
-              showWheel: false // Ховаємо колесо після успішної відправки
+              showWheel: false
             });
           })
           .catch(error => console.error("Error submitting answer:", error));
@@ -108,12 +104,10 @@ let WheelOfFortune = createReactClass({
 
     return (
       <div>
-        <h1>Гра "Колесо фортуни"</h1>
-
         <div className="wheel-container">
-          {successMessage && <p>{successMessage}</p>} {/* Відображаємо повідомлення про успіх */}
+          {successMessage && <p>{successMessage}</p>}
 
-          {showWheel && ( // Відображаємо колесо лише якщо showWheel true
+          {showWheel && (
             <React.Fragment>
               <div className="arrow"></div>
 
@@ -126,7 +120,7 @@ let WheelOfFortune = createReactClass({
               >
                 {questions.map((question, index) => (
                   <div key={index} className="wheel-segment">
-                    {index + 1} {/* Відображаємо порядковий номер питання */}
+                    {index + 1}
                   </div>
                 ))}
               </div>
@@ -141,7 +135,7 @@ let WheelOfFortune = createReactClass({
         {selectedQuestion && (
           <div className="question-block">
             <h2>Ваше питання:</h2>
-            <p>{selectedQuestion}</p> {/* Просто відображаємо рядок */}
+            <p>{selectedQuestion}</p>
             <form onSubmit={this.handleSubmitAnswer}>
               <textarea
                 value={this.state.answer}
@@ -159,9 +153,7 @@ let WheelOfFortune = createReactClass({
   }
 });
 
-// Отримуємо ID ноди з URL
-const pathArray = window.location.pathname.split('/');
-const nodeId = pathArray[pathArray.length - 1];
+const nodeId = 1;
 
 // Рендеримо компонент WheelOfFortune в елементі з ідентифікатором "react_wheel"
 ReactDOM.render(<WheelOfFortune nodeId={nodeId} />, document.getElementById('react_wheel'));

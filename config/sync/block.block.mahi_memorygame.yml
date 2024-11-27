@@ -1,0 +1,26 @@
+uuid: 84e90847-3d1e-41bd-a35f-a5671679a4cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - component
+    - system
+  theme:
+    - mahi
+id: mahi_memorygame
+theme: mahi
+region: content
+weight: 0
+provider: null
+plugin: 'component:memory_game'
+settings:
+  id: 'component:memory_game'
+  label: 'Memory Game'
+  label_display: '0'
+  provider: component
+  form_configuration: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/15

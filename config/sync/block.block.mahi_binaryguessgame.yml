@@ -1,0 +1,26 @@
+uuid: cd6997d5-f7b5-442b-848e-47f51129e97d
+langcode: en
+status: true
+dependencies:
+  module:
+    - component
+    - system
+  theme:
+    - mahi
+id: mahi_binaryguessgame
+theme: mahi
+region: content
+weight: 0
+provider: null
+plugin: 'component:binary_guess_game'
+settings:
+  id: 'component:binary_guess_game'
+  label: 'Binary Guess Game'
+  label_display: '0'
+  provider: component
+  form_configuration: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/14

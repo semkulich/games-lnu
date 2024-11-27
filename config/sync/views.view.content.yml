@@ -367,83 +367,36 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        status:
-          id: status
+        uid:
+          id: uid
           table: node_field_data
-          field: status
+          field: uid
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: Status
-            description: ''
-            use_operator: false
-            operator: status_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: status
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: true
-          group_info:
-            label: 'Published status'
-            description: ''
-            identifier: status
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: Published
-                operator: '='
-                value: '1'
-              2:
-                title: Unpublished
-                operator: '='
-                value: '0'
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
+          entity_field: uid
+          plugin_id: user_name
           operator: in
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: langcode_op
-            label: Language
+            operator_id: uid_op
+            label: 'Authored by'
             description: ''
             use_operator: false
-            operator: langcode_op
+            operator: uid_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: langcode
+            identifier: uid
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              content_editor: '0'
               administrator: '0'
             reduce: false
           is_grouped: false
@@ -458,18 +411,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        status_extra:
-          id: status_extra
-          table: node_field_data
-          field: status_extra
-          entity_type: node
-          plugin_id: node_status
-          operator: '='
-          value: false
-          group: 1
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
       filter_groups:
         operator: AND
         groups:
@@ -588,7 +529,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -620,7 +560,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

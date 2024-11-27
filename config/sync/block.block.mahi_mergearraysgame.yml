@@ -1,0 +1,26 @@
+uuid: 0c4407d6-4015-412c-bf1a-ff71cf5a939c
+langcode: en
+status: true
+dependencies:
+  module:
+    - component
+    - system
+  theme:
+    - mahi
+id: mahi_mergearraysgame
+theme: mahi
+region: content
+weight: 0
+provider: null
+plugin: 'component:merge_arrays_game'
+settings:
+  id: 'component:merge_arrays_game'
+  label: 'Merge Arrays Game'
+  label_display: '0'
+  provider: component
+  form_configuration: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/13

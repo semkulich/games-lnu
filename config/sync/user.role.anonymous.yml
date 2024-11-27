@@ -4,18 +4,10 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
-    - node.type.answer
-    - node.type.article
-    - rest.resource.answer_rest_resource
-    - rest.resource.questions_rest_resource
   module:
     - comment
     - contact
     - filter
-    - node
-    - rest
-    - search
-    - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
@@ -24,12 +16,5 @@ weight: 0
 is_admin: false
 permissions:
   - 'access comments'
-  - 'access content'
   - 'access site-wide contact form'
-  - 'administer rest resources'
-  - 'create answer content'
-  - 'create article content'
-  - 'restful get questions_rest_resource'
-  - 'restful post answer_rest_resource'
-  - 'search content'
   - 'use text format restricted_html'

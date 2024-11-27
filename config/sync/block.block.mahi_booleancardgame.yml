@@ -1,0 +1,26 @@
+uuid: 7ba46574-d0fc-442b-b82e-244c3e396db7
+langcode: en
+status: true
+dependencies:
+  module:
+    - component
+    - system
+  theme:
+    - mahi
+id: mahi_booleancardgame
+theme: mahi
+region: content
+weight: 0
+provider: null
+plugin: 'component:boolean_card_game'
+settings:
+  id: 'component:boolean_card_game'
+  label: 'Boolean Card Game'
+  label_display: '0'
+  provider: component
+  form_configuration: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/12

@@ -1,10 +1,11 @@
 .wheel-container {
   margin: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 300px;
+  height: 350px;
 }
 
 .wheel {
@@ -14,6 +15,9 @@
   border: 5px solid #333;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wheel-segment {
@@ -26,6 +30,11 @@
   text-align: center;
   padding: 10px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
 }
 
 .wheel-segment:nth-child(1) {
@@ -51,4 +60,19 @@
 .wheel-segment:nth-child(5) {
   transform: rotate(288deg) translate(-100%);
   background-color: #9C27B0;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #333;
+  position: absolute;
+  top: calc(50% - 170px);
+  z-index: 1;
+}
+
+.slider {
+  display: none;
 }

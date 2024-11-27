@@ -4,14 +4,16 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.answer
+    - rest.resource.answer_rest_resource
+    - rest.resource.questions_rest_resource
   module:
     - comment
     - contact
     - file
     - filter
+    - node
     - rest
-    - search
-    - shortcut
     - system
 _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
@@ -22,11 +24,12 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access shortcuts'
   - 'access site-wide contact form'
   - 'administer rest resources'
+  - 'create answer content'
   - 'delete own files'
   - 'post comments'
-  - 'search content'
+  - 'restful get questions_rest_resource'
+  - 'restful post answer_rest_resource'
   - 'skip comment approval'
   - 'use text format basic_html'

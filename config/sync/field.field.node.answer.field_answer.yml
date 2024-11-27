@@ -9,7 +9,7 @@ id: node.answer.field_answer
 field_name: field_answer
 entity_type: node
 bundle: answer
-label: Answer
+label: Відповідь
 description: ''
 required: false
 translatable: false

@@ -73,7 +73,7 @@ class AnswerRestResource extends ResourceBase {
 
     $node = Node::create([
       'type' => 'answer',
-      'title' => 'Answer to question: ' . $data['question'],
+      'title' => 'Відповідь на питання: ' . $data['question'],
       'field_question' => $data['question'],
       'field_answer' => $data['answer'],
       'status' => 1,
